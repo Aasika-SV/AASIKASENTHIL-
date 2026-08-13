@@ -1,0 +1,593 @@
+# Karmayii Organics Serene Nature Website
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karmayii Organics | Pure Virgin Oils & Fresh Botanicals</title>
+    <!-- Importing elegant Google Fonts for an upscale organic boutique feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset & Editorial Variable Tokens matching the uploaded image */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+
+            --primary-forest: #1c352d; /* Deep premium botanical green */
+            --fresh-leaf: #3b6b5c; /* Mid-tone soft leafy green */
+            --warm-sun-gold: #e59a54; /* Warm citrus/sunset orange from the image */
+            --herbal-powder: #7d8c6b; /* Muted henna/herbal green from the image bowl */
+            --warm-linen: #f4ebd9; /* Warm aesthetic sandy beige/cream backdrop from the image */
+            --card-ambient: #fdfaf4; /* Soft bright cream for high text contrast */
+            --charcoal-text: #2b3330; /* Soft contrast text */
+            --muted-earth: #6b7571; /* Sophisticated secondary text */
+            --white: #FFFFFF;
+        }
+
+        body {
+            background-color: var(--warm-linen);
+            color: var(--charcoal-text);
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.7;
+        }
+
+
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+
+        /* Quick Contact Header Bar */
+        .quick-contact-banner {
+            background-color: var(--primary-forest);
+            color: var(--warm-linen);
+            text-align: center;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+            z-index: 1001;
+        }
+
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(244, 235, 217, 0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(28, 53, 45, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+        }
+
+
+        .logo {
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            color: var(--primary-forest);
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal-text);
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--fresh-leaf);
+        }
+
+        .enquire-btn {
+            background-color: var(--primary-forest);
+            color: var(--warm-linen);
+            padding: 0.6rem 1.4rem;
+            border-radius: 0px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+
+        .enquire-btn:hover {
+            background-color: var(--fresh-leaf);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section capturing the soft, warm botanical image aesthetic with CSS leaf silhouettes */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #f5eadd 0%, #ebdcc5 100%);
+            height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 2rem;
+            overflow: hidden;
+        }
+
+        /* Pure CSS leaf silhouette overlays mimicking the shadows in your image */
+
+        .hero-leaf-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.12;
+            background-image: radial-gradient(circle at 10% 20%, var(--primary-forest) 2px, transparent 40px),
+                              radial-gradient(circle at 90% 10%, var(--primary-forest) 4px, transparent 60px);
+        }
+
+        .hero-content {
+            max-width: 750px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+
+            font-size: 3.4rem;
+            color: var(--primary-forest);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: var(--primary-forest);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        /* Brand Philosophy Section */
+        .philosophy {
+            max-width: 800px;
+            margin: 7rem auto;
+            text-align: center;
+            padding: 0 2rem;
+
+        }
+
+        .philosophy h2 {
+            font-size: 2rem;
+            color: var(--primary-forest);
+            margin-bottom: 2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .philosophy p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--fresh-leaf);
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        /* Products Collection Section - Styled to visually relate to the image components */
+        .products {
+
+            max-width: 1100px;
+            margin: 7rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-forest);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--muted-earth);
+            font-size: 0.95rem;
+            margin-bottom: 4rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+        }
+
+        .product-card {
+            background-color: var(--card-ambient);
+            border: 1px solid rgba(28, 53, 45, 0.04);
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(43, 51, 48, 0.02);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+
+            transform: translateY(-3px);
+        }
+
+        /* Styled placeholder visuals that reflect the image contents using text & tone patterns */
+        .product-visual-box {
+            width: 100%;
+            height: 320px;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            overflow: hidden;
+        }
+
+        /* Card 1 Vibe: Fresh green henna bowl style */
+        .box-herbal-hair {
+
+            background: linear-gradient(135deg, #e1e9d9 0%, #c9d6bc 100%);
+            border-left: 4px solid var(--herbal-powder);
+        }
+
+        /* Card 2 Vibe: Golden pure virgin oils and fresh coconut elements */
+        .box-virgin-oils {
+            background: linear-gradient(135deg, #f2e2cb 0%, #e2cdb1 100%);
+            border-left: 4px solid var(--warm-sun-gold);
+        }
+
+        /* Card 3 Vibe: Vibrant tropical orchard fruits (oranges/grapes) */
+        .box-orchard-fruits {
+            background: linear-gradient(135deg, #ebdcc5 0%, #dfcaae 100%);
+            border-left: 4px solid var(--fresh-leaf);
+        }
+
+        .visual-label {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-forest);
+
+            font-size: 1.3rem;
+            font-style: italic;
+            position: relative;
+            z-index: 2;
+        }
+
+        .visual-decoration-leaves {
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            font-size: 5rem;
+            opacity: 0.08;
+            color: var(--primary-forest);
+        }
+
+        .product-tag {
+            color: var(--fresh-leaf);
+            font-size: 0.75rem;
+            font-weight: 600;
+
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.4rem;
+        }
+
+        .product-name {
+            font-size: 1.35rem;
+            color: var(--primary-forest);
+            margin-bottom: 0.6rem;
+        }
+
+        .product-desc {
+            font-size: 0.95rem;
+            color: var(--muted-earth);
+            font-weight: 300;
+        }
+
+        /* Values Banner Section */
+        .values-banner {
+
+            background-color: rgba(28, 53, 45, 0.03);
+            padding: 6rem 2rem;
+            border-top: 1px solid rgba(28, 53, 45, 0.03);
+        }
+
+        .values-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 4rem;
+        }
+
+        .value-item {
+            text-align: left;
+        }
+
+        .value-item h3 {
+            font-size: 1.25rem;
+
+            margin-bottom: 1rem;
+            color: var(--primary-forest);
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+
+        .value-item p {
+            font-size: 0.95rem;
+            color: var(--muted-earth);
+            font-weight: 300;
+        }
+
+        /* Clean Promotional Contact Section */
+        .enquiry-section {
+            max-width: 700px;
+            margin: 8rem auto;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+
+        .enquiry-section h2 {
+            font-size: 2.2rem;
+            color: var(--primary-forest);
+            margin-bottom: 1rem;
+        }
+
+        .enquiry-section p {
+            font-size: 1.05rem;
+            color: var(--muted-earth);
+            font-weight: 300;
+            margin-bottom: 3.5rem;
+        }
+
+        .contact-list {
+            border-top: 1px solid rgba(28, 53, 45, 0.1);
+            border-bottom: 1px solid rgba(28, 53, 45, 0.1);
+            padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+
+            gap: 1.5rem;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.05rem;
+        }
+
+        .contact-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--muted-earth);
+        }
+
+        .contact-value a {
+            color: var(--primary-forest);
+
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .contact-value a:hover {
+            color: var(--fresh-leaf);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-forest);
+            color: var(--warm-linen);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+
+            font-weight: 300;
+            opacity: 0.6;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.3rem;
+            }
+
+            .philosophy p {
+                font-size: 1.15rem;
+            }
+
+
+            .contact-row {
+                flex-direction: column;
+                gap: 0.2rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Quick Contact Header Bar -->
+    <div class="quick-contact-banner">
+        Direct Desk Enquiry: +91 7373224455 &nbsp;•&nbsp; +91 9789369469
+    </div>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">Karmayii Organics</div>
+
+            <ul class="nav-links">
+                <li><a href="#philosophy">The Promise</a></li>
+                <li><a href="#showcase">Our Harvest</a></li>
+                <li><a href="#enquire">Inquiries</a></li>
+            </ul>
+            <a href="#enquire" class="enquire-btn">Enquire</a>
+        </div>
+    </header>
+
+    <!-- Hero Showcase Section with Realistic Warm Linen Tone & Silhouette Shadows -->
+    <section class="hero">
+        <div class="hero-leaf-overlay"></div>
+        <div class="hero-content">
+            <h1>Right from Our Orchards to Your Home</h1>
+            <p>Cultivating an elegant standard of small-batch virgin oils, raw herbal hair treatments, and pristine seasonal agricultural goods made entirely on demand.</p>
+            <a href="#enquire" class="enquire-btn">Connect With Us</a>
+        </div>
+    </section>
+
+
+    <!-- Brand Philosophy Section -->
+    <section class="philosophy" id="philosophy">
+        <h2>Purely Grounded, Intentionally Made</h2>
+        <p>"Every bottle and every basket is traced back to the field it came from. The oils are pressed the week you order them, and the product is picked the morning it leaves. Because nothing is preserved, nothing is altered."</p>
+    </section>
+
+    <!-- Products Collection Section - Fully integrated with the image's herbal/oil palette -->
+    <section class="products" id="showcase">
+        <h2 class="section-title">The Botanical Range</h2>
+        <p class="section-subtitle">Pure extracts customized selectively on request</p>
+        
+        <div class="product-grid">
+            
+            <!-- Product 1: Herbal Hair Oils (Relates to the herbal powder bowl) -->
+            <div class="product-card">
+                <div class="product-visual-box box-herbal-hair">
+                    <div class="visual-label">Fresh Marudhani & Leaf Herbs</div>
+                    <div class="visual-decoration-leaves">🌿</div>
+                </div>
+
+                <div>
+                    <div class="product-tag">Artisanal Extract</div>
+                    <h3 class="product-name">Herbal Hair Oils & Elixirs</h3>
+                    <p class="product-desc">Slow-infused with traditional fresh henna leaves to reinforce roots naturally while creating a deeply satisfying, luxurious aromatic experience.</p>
+                </div>
+            </div>
+
+            <!-- Product 2: Pure Virgin Oils (Relates to the glass flasks, coconut, and almond oils) -->
+            <div class="product-card">
+                <div class="product-visual-box box-virgin-oils">
+                    <div class="visual-label">Cold-Pressed Virgin Flasks</div>
+                    <div class="visual-decoration-leaves">🥥</div>
+                </div>
+                <div>
+                    <div class="product-tag">Cold Pressed</div>
+                    <h3 class="product-name">Pure Virgin Oils & Face Packs</h3>
+                    <p class="product-desc">Extracted gently within the precise week of your consultation to safeguard delicate bio-active integrity and structural nourishment with zero preservatives.</p>
+                </div>
+            </div>
+
+
+            <!-- Product 3: Orchard Fruits (Relates to the citrus orange and grape harvest bowl) -->
+            <div class="product-card">
+                <div class="product-visual-box box-orchard-fruits">
+                    <div class="visual-label">Sun-Ripened Farm Harvest</div>
+                    <div class="visual-decoration-leaves">🍊</div>
+                </div>
+                <div>
+                    <div class="product-tag">Morning Harvest</div>
+                    <h3 class="product-name">Tropical Orchard Fruits</h3>
+                    <p class="product-desc">Sun-matured seasonal mangoes, sapotas, and custard apples gathered selectively from our managed groves the exact morning they begin their journey to you.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Integrity & Values Banner Section -->
+    <section class="values-banner">
+        <div class="values-grid">
+
+            <div class="value-item">
+                <h3>Picked Fresh Every Morning</h3>
+                <p>We do not manage warehouse inventory. Our morning schedule is intentionally tailored around direct delivery blocks to retain raw vitality.</p>
+            </div>
+            <div class="value-item">
+                <h3>Zero Chemical Preservation</h3>
+                <p>By producing exclusively on request, we remove synthetic additives or structural shelf extensions entirely from our vocabulary.</p>
+            </div>
+            <div class="value-item">
+                <h3>Absolute Transparency</h3>
+                <p>Every single product maps completely back to our single-origin managed fields and local orchard trees.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Contact & Enquiry Section -->
+    <section class="enquiry-section" id="enquire">
+        <h2>Custom Batch Enquiries</h2>
+        <p>Because we process our orchards selectively to preserve absolute biological integrity, allocations are managed via direct personal consults.</p>
+
+        
+        <div class="contact-list">
+            <div class="contact-row">
+                <div class="contact-label">Primary Line</div>
+                <div class="contact-value"><a href="tel:+917373224455">+91 7373224455</a></div>
+            </div>
+            <div class="contact-row">
+                <div class="contact-label">Secondary Line</div>
+                <div class="contact-value"><a href="tel:+919789369469">+91 9789369469</a></div>
+            </div>
+            <div class="contact-row">
+                <div class="contact-label">Digital Desk</div>
+                <div class="contact-value"><a href="mailto:karmayiiorganics@gmail.com">karmayiiorganics@gmail.com</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>&copy; 2026 Karmayii Organics. Grown with nature, packaged with purpose. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
